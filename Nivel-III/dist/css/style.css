@@ -1,0 +1,63 @@
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.caclBox {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+}
+.caclBox .screen {
+  min-height: 3em;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border: 1px solid black;
+}
+.caclBox .screen p {
+  font-size: 2.5em;
+}
+.caclBox .numbers {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+[class^=row] {
+  display: flex;
+  width: 100%;
+}
+
+[class^=item] {
+  border: 1px solid black;
+  width: 25%;
+  text-align: center;
+  line-height: 3rem;
+  font-style: bold;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0.2rem 0;
+}
+[class^=item]:hover {
+  background-color: #da3e3e;
+  color: white;
+}
+
+.item-17 {
+  flex-basis: 100%;
+  max-height: 2em;
+  font-size: 1.5rem;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,3 @@
+@function widthItem($value) {
+  @return percentage($value / $totalCol);
+}
