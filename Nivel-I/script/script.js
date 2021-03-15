@@ -6,7 +6,7 @@ console.log("Hola Mundo");
 /*
  * Exercici 2
  */
-// alert("Me Llamo Marlon");
+alert("Me Llamo Marlon");
 
 /*
  * Exercici 3
@@ -30,11 +30,11 @@ let notaExamen = 4;
 const aprobado = "Muy bien, has aprobado con un";
 const suspendido = "Ohh has suspendido con un ";
 
-// if (notaExamen >= 5) {
-//   alert(`${aprobado} ${notaExamen}`);
-// } else {
-//   alert(`${suspendido} ${notaExamen}`);
-// }
+if (notaExamen >= 5) {
+  alert(`${aprobado} ${notaExamen}`);
+} else {
+  alert(`${suspendido} ${notaExamen}`);
+}
 
 /*
  * Exercici 6
