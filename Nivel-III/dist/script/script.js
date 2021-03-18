@@ -45,7 +45,11 @@ function calculator(triggerEvent) {
   }
 
   if (triggerEvent === "=" || triggerEvent === "Enter") {
-    showResult()
+    if (result === "") {
+      result = result
+    } else {
+      showResult()
+    }
   }
 
   if (triggerEvent === "clean" || triggerEvent === "Delete") {
@@ -67,8 +71,8 @@ function print(element) {
  * Mostrar el resultado y permitir que se pueda seguir sumando
  */
 function showResult() {
-  screen.innerText = eval(result)
   result = eval(result)
+  screen.innerText = result
 }
 
 /*
