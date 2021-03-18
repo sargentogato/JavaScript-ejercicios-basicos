@@ -30,12 +30,12 @@ function handlerEvent(evento) {
 
     if (hasSome || keypressed === "Enter" || keypressed === "Delete") {
       triggerEvent = evento.key
+      calculator(triggerEvent)
     }
   } else if (eventType === "click") {
     triggerEvent = evento.target.id
+    calculator(triggerEvent)
   }
-
-  calculator(triggerEvent)
 }
 
 function calculator(triggerEvent) {
