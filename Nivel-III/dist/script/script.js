@@ -39,6 +39,15 @@ function handlerEvent(evento) {
 }
 
 function calculator(triggerEvent) {
+  if (Number.isInteger(result)) {
+    if (triggerEvent === "=" || triggerEvent === ".") return
+    if (triggerEvent === "+" || triggerEvent === "*" || triggerEvent === "-" || triggerEvent === "/") {
+      result = result
+    } else {
+      clean()
+    }
+  }
+
   if (triggerEvent !== "=" && triggerEvent !== "clean" && triggerEvent !== "Enter") {
     result += triggerEvent
     print(triggerEvent)
@@ -72,7 +81,13 @@ function print(element) {
  */
 function showResult() {
   result = eval(result)
-  screen.innerText = result
+  const testResult = Number.isInteger(result)
+  console.log(result)
+  if (!testResult) {
+    screen.innerText = result.toFixed(2)
+  } else {
+    screen.innerText = result
+  }
 }
 
 /*
